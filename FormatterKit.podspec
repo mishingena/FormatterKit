@@ -3,10 +3,10 @@ Pod::Spec.new do |s|
   s.version   = '1.8.1'
   s.license   = { :type => 'MIT' }
   s.summary   = '`stringWithFormat:` for the sophisticated hacker set.'
-  s.homepage  = 'https://github.com/mattt/FormatterKit'
+  s.homepage  = 'https://github.com/mishingena/FormatterKit'
   s.social_media_url = 'https://twitter.com/mattt'
   s.author    = { 'Mattt Thompson' => 'm@mattt.me' }
-  s.source    = { :git => 'https://github.com/mattt/FormatterKit.git',
+  s.source    = { :git => 'https://github.com/mishingena/FormatterKit.git',
                   :tag => s.version
                 }
 
