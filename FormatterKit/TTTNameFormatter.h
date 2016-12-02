@@ -22,7 +22,7 @@
 
 #import <Foundation/Foundation.h>
 
-#if TARGET_OS_IOS
+#if !defined(__MAC_OS_X_VERSION_MAX_ALLOWED)
 
 /**
  Instances of `TTTNameFormatter` create localized string representations of personal names, which may change order or be displayed with or without whitespace delimiting depending on the current locale or source language. 

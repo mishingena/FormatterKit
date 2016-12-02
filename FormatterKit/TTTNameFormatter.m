@@ -22,7 +22,7 @@
 
 #import "TTTNameFormatter.h"
 
-#if TARGET_OS_IOS
+#if !defined(__MAC_OS_X_VERSION_MAX_ALLOWED)
 
 #import <AddressBook/AddressBook.h>
 

@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 #import "TTTURLRequestFormatter.h"
-#import "NSBundle+FormatterKit.h"
 
 @interface NSMutableString (TTTURLRequestFormatter)
 - (void)appendCommandLineArgument:(NSString *)arg;
@@ -128,7 +127,7 @@
              forString:(__unused NSString *)string
       errorDescription:(out NSString *__autoreleasing *)error
 {
-    *error = NSLocalizedStringFromTableInBundle(@"Method Not Implemented", @"FormatterKit", [NSBundle formatterKitBundle], nil);
+    *error = NSLocalizedStringFromTableInBundle(@"Method Not Implemented", @"FormatterKit", [NSBundle bundleForClass:[self class]], nil);
 
     return NO;
 }

@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 #import "TTTColorFormatter.h"
-#import "NSBundle+FormatterKit.h"
 
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 
@@ -241,7 +240,7 @@ static void TTTGetHSLComponentsFromColor(UIColor *color, CGFloat *hue, CGFloat *
         return YES;
     }
 
-    *error = NSLocalizedStringFromTableInBundle(@"Color format not recognized", @"FormatterKit", [NSBundle formatterKitBundle], nil);
+    *error = NSLocalizedStringFromTableInBundle(@"Color format not recognized", @"FormatterKit", [NSBundle bundleForClass:[self class]], nil);
 
     return NO;
 }

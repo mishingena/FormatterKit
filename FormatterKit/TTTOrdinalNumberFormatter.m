@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 #import "TTTOrdinalNumberFormatter.h"
-#import "NSBundle+FormatterKit.h"
 
 static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @".";
 
@@ -273,7 +272,7 @@ static NSString * const kTTTOrdinalNumberFormatterDefaultOrdinalIndicator = @"."
         return YES;
     }
 
-    *error = NSLocalizedStringFromTableInBundle(@"String did not contain a valid ordinal number", @"FormatterKit", [NSBundle formatterKitBundle], nil);
+    *error = NSLocalizedStringFromTableInBundle(@"String did not contain a valid ordinal number", @"FormatterKit", [NSBundle bundleForClass:[self class]], nil);
 
     return NO;
 }
